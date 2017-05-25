@@ -12,7 +12,7 @@ public interface RoleDAO {
 	
 	public Role getByEmailId(String emailid);
 	
-	public Role getByContactNumber(int contactnumber);
+	public Role getByContactNumber(long contactnumber);
 	
 	public void saveOrUpdate(Role role);
 		

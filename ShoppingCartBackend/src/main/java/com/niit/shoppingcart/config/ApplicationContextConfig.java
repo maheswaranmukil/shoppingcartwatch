@@ -58,7 +58,7 @@ public class ApplicationContextConfig {
 
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
-		
+		 
 		
 		return dataSource;
 	}

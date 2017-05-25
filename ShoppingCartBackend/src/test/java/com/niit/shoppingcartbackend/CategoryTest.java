@@ -68,7 +68,7 @@ public class CategoryTest {
 		role.setUserName("kjgdffd");
 		role.setEmailId("hgfshdghj");
 		role.setContactNumber(6567);
-		
+		role.setRole("user");
 		user.setRole(role);
 		role.setUser(user);
 		
@@ -91,7 +91,7 @@ public class CategoryTest {
 		supplier.setSupplierName("hddsjk");
 		supplier.setContactNumber(87968764);
 		supplierDAO.saveOrUpdate(supplier);
-		
+	
 		
 		whishlist.setProductName("dhjf");
 		whishlist.setPrice(87);

@@ -25,7 +25,7 @@ public class Role {
 	private String role;	
 	private String userName;
 	private String emailId;
-	private int contactNumber;
+	private long contactNumber;
 	
 	
 	@OneToOne(cascade=CascadeType.ALL)
@@ -68,10 +68,11 @@ public class Role {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public int getContactNumber() {
+	
+	public long getContactNumber() {
 		return contactNumber;
 	}
-	public void setContactNumber(int contactNumber) {
+	public void setContactNumber(long contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 	public String getRole() {

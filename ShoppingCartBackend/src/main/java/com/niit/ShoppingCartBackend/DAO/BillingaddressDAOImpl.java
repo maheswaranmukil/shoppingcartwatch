@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.ShoppingCartBackend.Model.Billingaddress;
-import com.niit.ShoppingCartBackend.Model.Category;
 
 @Repository("BillingaddressDAO")
 public class BillingaddressDAOImpl implements BillingaddressDAO {
@@ -56,7 +55,7 @@ private  SessionFactory sessionFactory;
 	}
 
 @Transactional
-	public Billingaddress getByContactNumber(int contactnumber) {
+	public Billingaddress getByContactNumber(long contactnumber) {
 	String hql = "from Billingaddress where ContactNumber ='" + contactnumber + "'";
 	Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 	@SuppressWarnings("unchecked")

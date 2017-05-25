@@ -142,7 +142,7 @@ public class UserDAOImpl  implements UserDAO{
 
 	@Transactional
 	public void saveOrUpdate(User user) {
-		sessionFactory.getCurrentSession().save(user);
+		sessionFactory.getCurrentSession().saveOrUpdate(user);
 		
 	}
 

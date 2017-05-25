@@ -27,13 +27,13 @@ private String emailId;
 
 private String password;
 
-private int contactNumber;
+private long contactNumber;
 
 private String address;
 
-private int zipcode;
+private long zipcode;
 
-private boolean enabled;
+private boolean enabled; 
 
 @OneToOne(cascade=CascadeType.ALL)
 @JoinColumn(name="UserId")
@@ -90,13 +90,6 @@ public void setPassword(String password) {
 	this.password = password;
 }
 
-public int getContactNumber() {
-	return contactNumber;
-}
-
-public void setContactNumber(int contactNumber) {
-	this.contactNumber = contactNumber;
-}
 
 public String getAddress() {
 	return address;
@@ -106,14 +99,21 @@ public void setAddress(String address) {
 	this.address = address;
 }
 
-public int getZipcode() {
+public long getContactNumber() {
+	return contactNumber;
+}
+
+public void setContactNumber(long contactNumber) {
+	this.contactNumber = contactNumber;
+}
+
+public long getZipcode() {
 	return zipcode;
 }
 
-public void setZipcode(int zipcode) {
+public void setZipcode(long zipcode) {
 	this.zipcode = zipcode;
 }
-
 
 
 }

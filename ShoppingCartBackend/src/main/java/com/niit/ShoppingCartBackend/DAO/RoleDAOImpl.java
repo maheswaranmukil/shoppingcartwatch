@@ -57,7 +57,7 @@ public class RoleDAOImpl implements RoleDAO {
 	}
 
 	@Transactional
-	public Role getByContactNumber(int contactnumber) {
+	public Role getByContactNumber(long contactnumber) {
 		String hql = "from Role where contactNumber ='" + contactnumber + "'";
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")

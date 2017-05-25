@@ -18,9 +18,9 @@ public class Shippingaddress {
 	private int userId;
 	private String emailId;
 	private String userName;
-	private int contactNumber;
+	private long contactNumber;
 	private String address;
-	private int zipcode;
+	private long zipcode;
 	
 	public int getShippingId() {
 		return shippingId;
@@ -46,25 +46,26 @@ public class Shippingaddress {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public int getContactNumber() {
-		return contactNumber;
-	}
-	public void setContactNumber(int contactNumber) {
-		this.contactNumber = contactNumber;
-	}
+	
 	public String getAddress() {
 		return address;
 	}
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getZipcode() {
+	public long getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(long contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+	public long getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(int zipcode) {
+	public void setZipcode(long zipcode) {
 		this.zipcode = zipcode;
 	}
-
+	
 	
 
 }
