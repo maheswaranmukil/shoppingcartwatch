@@ -15,7 +15,6 @@ public class BillingaddressController {
 
 	@Autowired
 	private BillingaddressDAO billingaddressDAO;
-	
 	@RequestMapping("billingaddressPage")
 	public ModelAndView newBillingaddress(){
 		

@@ -105,9 +105,9 @@ h1 {
   <c:forEach items="${productList}" var="product" varStatus="status">
   <tr>
     <td>${status.count}</td>
-			<td>${product.productId}</td>
+			<td>${product.productId}</td> 
 			<td> <img src="resources/image/products/${product.productId}.jpg" alt="${product.productId}" width=100px; height=100px;></td>
-			<td>${product.productName}</td>
+			<td>${product.productName}</td> 
 			<td>${product.productDescription}</td>
 			<td>${product.stock}</td>
 			<td>${product.price}</td>

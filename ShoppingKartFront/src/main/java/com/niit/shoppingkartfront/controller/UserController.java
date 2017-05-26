@@ -42,7 +42,7 @@ public class UserController {
 	private Role role;
 
 	@RequestMapping("addNewUser")
-	public String addUser(@ModelAttribute User user, @ModelAttribute Shippingaddress shippingaddress, @ModelAttribute Billingaddress billingaddress, Model model) {
+	public String addNewUser(@ModelAttribute User user, @ModelAttribute Shippingaddress shippingaddress, @ModelAttribute Billingaddress billingaddress, Model model) {
 		
 		String message;
 		
@@ -51,8 +51,6 @@ public class UserController {
 			
 		}
 		else{
-			
-		
 		user.setEnabled(true);
 		role.setEmailId(user.getEmailId());
 		role.setRole("ROLE_USER");
@@ -65,11 +63,17 @@ public class UserController {
 		userDAO.saveOrUpdate(user);
 		roleDAO.saveOrUpdate(role);
 		
+		/*shippingaddress.setUserId(user.getUserId());
+		shippingaddressDAO.saveOrUpdate(shippingaddress);
+		
+		billingaddress.setUserId(user.getUserId());
+		billingaddressDAO.saveOrUpdate(billingaddress);*/
+		
 		shippingaddress.setUserId(user.getUserId());
 		shippingaddressDAO.saveOrUpdate(shippingaddress);
 		
 		billingaddress.setUserId(user.getUserId());
-		billingaddressDAO.saveOrUpdate(billingaddress);
+		billingaddressDAO.saveOrUpdate(billingaddress); 
 		
 		message = "You have Successfully Registered";
 		}
@@ -87,7 +91,7 @@ public class UserController {
 	
 		Role role = roleDAO.getByEmailId(email);
 		
-		String role1 = role.getRole();
+		String role1 = role.getRole(); 
 		
 		if(role1.equals("ROLE_ADMIN")){
 			
@@ -96,12 +100,12 @@ public class UserController {
 		else if(role1.equals("ROLE_USER")){
 			List<Product> productList = productDAO.list();
 			model.addAttribute("productList", productList);
-			model.addAttribute("userLoggedIn", "true");
+			model.addAttribute("userLoggedIn", "true");    
 			return "UserLogin";
 		}
 		else{		
 		
-		return "NewLogin";
+		return "NewLogin";  
 		}
 	}
 	

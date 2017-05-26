@@ -34,7 +34,7 @@ public class ProductController {
 	public String ViewProduct(){
 		
 		return "ViewProduct";
-	}
+	} 
 	@RequestMapping("productPage")
 	public ModelAndView newProduct(){
 		
@@ -48,14 +48,13 @@ public class ProductController {
 	}
 	@RequestMapping("addProduct")
 	public String addProduct(@ModelAttribute Product product, @RequestParam("file") MultipartFile file ,Model model){
-		productDAO.saveOrUpdate(product);
+		productDAO.saveOrUpdate(product);  
 		
-		String path = "D://DT/ShoppingKartFront/src/main/webapp/WEB-INF/resources/image/products/";
+		String path = "D://workspace/Project/ShoppingKartFront/src/main/webapp/WEB-INF/resources/image/products";
 		FileUtil.upload(path, file, product.getProductId()+".jpg");
 		
-		model.addAttribute("ViewProductButtonClicked", true);
 		
-		return "redirect:viewProduct";
+				return "redirect:viewProduct";
 		
 	}
 	@RequestMapping("viewProduct")
@@ -89,6 +88,6 @@ public class ProductController {
 		
 		productDAO.saveOrUpdate(product);
 		return "redirect:viewProduct";
-	}
+	} 
 
 }

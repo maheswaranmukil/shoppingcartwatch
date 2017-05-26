@@ -45,7 +45,7 @@ public String HomePage(Model model){
 
 		ModelAndView mv = new ModelAndView("NewCart");
 		return mv;
-	}
+	}  
 
 	@RequestMapping("/loginpage")
 	public ModelAndView loginpage(@RequestParam(value = "error", required = false) String error,
@@ -61,7 +61,7 @@ public String HomePage(Model model){
 		}
 
 		mv.addObject("loginButtonClicked", true);
-		return mv;
+		return mv;  
 	}
 
 	@RequestMapping("loginPage")

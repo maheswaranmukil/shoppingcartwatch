@@ -35,8 +35,8 @@ div.desc {
 </head>
 <body>
 <c:forEach items="${productList}" var="product">
-
-<div class="gallery">
+  
+<div class="gallery">  
   <a href="productDescription?productId=${product.productId}">
     <img src="resources/image/products/${product.productId}.jpg" alt="${product.productId}" width=250px; height=250px;>
   </a>

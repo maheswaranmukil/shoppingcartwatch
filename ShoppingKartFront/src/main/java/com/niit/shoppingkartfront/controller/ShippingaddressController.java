@@ -104,7 +104,7 @@ public class ShippingaddressController {
 		shippingaddressDAO.saveOrUpdate(shippingaddress);
 		return "redirect:proceed";
 	}
-	
+	 
 	@ModelAttribute
 	public void commonToUser(Model model){
 		model.addAttribute("userLoggedIn", "true");
