@@ -16,7 +16,7 @@ public class Supplier {
 	@GeneratedValue
 	private int supplierId;
 	private String supplierName;
-	private int contactNumber;
+	private long contactNumber;
 	public int getSupplierId() {
 		return supplierId;
 	}
@@ -29,12 +29,11 @@ public class Supplier {
 	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
 	}
-	public int getContactNumber() {
+	public long getContactNumber() {
 		return contactNumber;
 	}
-	public void setContactNumber(int contactNumber) {
+	public void setContactNumber(long contactNumber) {
 		this.contactNumber = contactNumber;
 	}
-	
-	
+		
 }

@@ -65,8 +65,8 @@ public class CategoryTest {
 		user.setAddress("s12,sejkajdh");
 		user.setZipcode(75426);
 
-		role.setUserName("kjgdffd");
-		role.setEmailId("hgfshdghj");
+		role.setUserName("mukilan");
+		role.setEmailId("mukilan@gmail.com");
 		role.setContactNumber(6567);
 		role.setRole("user");
 		user.setRole(role);
@@ -76,29 +76,29 @@ public class CategoryTest {
 		roleDAO.saveOrUpdate(role);
 		
 		
-		product.setProductName("fdknmfg");
+		product.setProductName("fastrack");
 		productDAO.saveOrUpdate(product);
 		
-		billingaddress.setAddress("hfdjdufuinv");
+		billingaddress.setAddress("chithalamputtur");
 		billingaddress.setContactNumber(897465);
 		billingaddressDAO.saveOrUpdate(billingaddress);
 		
 		
-		cart.setProductName("dfhjj");
+		cart.setProductName("watch");
 		cartDAO.saveOrUpdate(cart);
 		
 		
-		supplier.setSupplierName("hddsjk");
-		supplier.setContactNumber(87968764);
+		supplier.setSupplierName("aaron");
+		supplier.setContactNumber(765656678);
 		supplierDAO.saveOrUpdate(supplier);
 	
 		
-		whishlist.setProductName("dhjf");
+		whishlist.setProductName("menswatches");
 		whishlist.setPrice(87);
 		wishlistDAO.saveOrUpdate(whishlist);
 		
-		shippingaddress.setAddress("fdgfs");
-		shippingaddress.setUserName("jkfgjd");
+		shippingaddress.setAddress("srivilliputtur");
+		shippingaddress.setUserName("jeevaraj");
 		shippingaddressDAO.saveOrUpdate(shippingaddress);
 		
 		

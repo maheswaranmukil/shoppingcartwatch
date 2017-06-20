@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.ShoppingCartBackend.Model.Product;
+
 import com.niit.ShoppingCartBackend.Model.Supplier;
 
 @Repository("SupplierDAO")
@@ -27,7 +27,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 		@SuppressWarnings({ "unchecked" })
 		List<Supplier> listSupplier = (List<Supplier>) sessionFactory.getCurrentSession().createCriteria(Supplier.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
-		return listSupplier;
+		return listSupplier; 
 	}
 
 	@Transactional
@@ -57,7 +57,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 	}
 
 	@Transactional
-	public Supplier getByContactNumber(int contactnumber) {
+	public Supplier getByContactNumber(long contactnumber) {
 		String hql = "from Supplier where ContactNumber='" + contactnumber + "'";
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -67,7 +67,7 @@ public class SupplierDAOImpl implements SupplierDAO{
 			return listSupplier.get(0);
 		}
 		return null;
-	}
+	}   
 
 	@Transactional
 	public void saveOrUpdate(Supplier supplier) {

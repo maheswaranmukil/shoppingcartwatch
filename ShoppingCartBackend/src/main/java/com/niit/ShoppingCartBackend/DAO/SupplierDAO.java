@@ -12,7 +12,7 @@ public interface SupplierDAO {
 	
 	public Supplier getBySupplierId(int supplierid);	
 	
-    public Supplier getByContactNumber(int contactnumber);
+    public Supplier getByContactNumber(long contactnumber);
     
 	public void saveOrUpdate(Supplier supplier);
 		
