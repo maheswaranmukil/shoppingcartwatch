@@ -30,7 +30,7 @@ th {
 				<th align="left">Quantity</th>
 				<th align="left">Total</th>
 				<th align="left">Days</th>
-				<th align="left">Remove</th>
+				
 
 			</tr>
 
@@ -43,8 +43,7 @@ th {
 					<td>${cart.qty}</td>
 					<td>${cart.total}</td>
 					<td>${cart.days}</td>
-					<td><a href="removeCart?cartId=${cart.cartId}">Remove</a></td>
-				</tr>
+						</tr>
 			</c:forEach>
 			<tr>
 				<td colspan="5">Grand Total :</td>

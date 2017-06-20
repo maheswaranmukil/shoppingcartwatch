@@ -91,7 +91,7 @@ body {
 	list-style-type: none;
 	margin: 0;
 	overflow: hidden;
-	background-color: #0099ff;
+	background-color: #1f1c1f;
 }
 
 li {
@@ -100,14 +100,15 @@ li {
 
 li a {
 	display: block;
-	color: white;
+	color: #ff630a;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	face: Freestyle Script;
 }
 
 li a:hover {
-	background-color: #ed2553;
+	background-color:black;
 }
 
 #page {
@@ -146,7 +147,6 @@ li a:hover {
 
 
 				</c:if>
-			</ul>
 		</div>
 
 

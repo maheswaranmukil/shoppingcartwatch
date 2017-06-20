@@ -75,14 +75,14 @@ public class CartController {
 		cart.setEmailId(p.getName());
 		cart.setPrice(product.getPrice());
 		cart.setProductId(productId);
-		cart.setProductName(product.getProductName());
+		cart.setProductName(product.getProductName());  
 		cart.setQty(1);
-		cart.setStatus("N");
+		cart.setStatus("N");  
 		cart.setUserId(user.getUserId());
 		cart.setUserName(user.getUserName());
 		cart.setDays(day);
 		cart.setTotal(product.getPrice()*cart.getQty());
-		cartDAO.saveOrUpdate(cart);
+		cartDAO.saveOrUpdate(cart);  
 			}
 		int stc = product.getStock() - 1;
 		product.setStock(stc);

@@ -6,7 +6,7 @@
 	
 <style>
 .back{
-background: white ;
+background:black		  ;
   
 }
 
@@ -42,7 +42,7 @@ li a {
 </head>
 <body class="back">
 
-			<h1><a><font color="#ff0066">Shopping Cart</font></a></h1>
+			<h1><a><font color="#ff630a" face="Freestyle Script"><b>Shopping Cart</b></font></a></h1>
 		
  <%@include file="/WEB-INF/views/Menu.jsp" %>
  <%@include file="/WEB-INF/views/Carousel.jsp" %>
